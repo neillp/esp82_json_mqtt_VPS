@@ -35,9 +35,9 @@
 
 // Update these with values suitable for your network.
 
-const char* ssid = "pieterse";
-const char* password = "yours246";
-const char* mqtt_server = "181.214.69.207";
+const char* ssid = "LocalRouterSSID";
+const char* password = "LocalRouterPW";
+const char* mqtt_server = "VPSServerIP";
 const int sensor_pin = A0;
 
 //const char* sensor = root["sensor"];

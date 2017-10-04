@@ -12,3 +12,4 @@ Make sure that your data variables are the same from the ESP8266, to the DB and 
 
 I am not a professional programmer, so apologies any "strange" coding! The main thing is that it works and was a great learning experience! 
 
+Note: I never had a RTC, so I gave the 'time' a fixed value. I will work on this at a future date.

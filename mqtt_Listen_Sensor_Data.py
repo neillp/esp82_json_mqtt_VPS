@@ -10,7 +10,7 @@ import paho.mqtt.client as mqtt
 from store_Sensor_Data_to_DB import sensor_Data_Handler   # The SDH is in store_Sensor_Data_to_DB.py
 
 # MQTT Settings 
-MQTT_Broker = "181.214.69.207"
+MQTT_Broker = "VPS IP"
 MQTT_Port = 1883
 Keep_Alive_Interval = 45
 MQTT_Topic = "outTopic"   # Edit to relevant topic

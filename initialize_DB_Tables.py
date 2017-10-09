@@ -14,25 +14,25 @@ DB_Name =  "IoTN.db"
 # SQLite DB Table Schema
 TableSchema="""
 drop table if exists Sensor_Data ;
-create table Sensor_Data (
+create table Sensor_Data (                  //For first sensor
   id integer primary key autoincrement,
   SensorID text,
-  Date_n_Time text,
-  SensorData text
+  SensorData text,
+  DateNTime text
 );
 
 
 drop table if exists Sensor2_Data ;
-create table Sensor2_Data (
+create table Sensor2_Data (                 //For second sensor if required
   id integer primary key autoincrement,
   SensorID text,
-  Date_n_Time text,
-  Sensor2Data text
+  SensorData text,
+  DateNTime text
 );
 """
 
 #Connect or Create DB File
-conn = sqlite3.connect('/home/neill/IoTN.db')
+conn = sqlite3.connect('/home/user/IoTN.db')    // Set up as required
 curs = conn.cursor()
 
 #Create Tables

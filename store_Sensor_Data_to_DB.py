@@ -40,12 +40,12 @@ def sensor1_Data_Handler(jsonData):
 	#Parse Data 
 	json_Dict = json.loads(jsonData)
 	SensorID = json_Dict['SensorID']
-	Data_and_Time = json_Dict['Date_n_Time']
 	SensorData = json_Dict['SensorData']
+	DateNTime = json_Dict['DateNTime']
 	
 	#Push into DB Table
 	dbObj = DatabaseManager()
-	dbObj.add_del_update_db_record("insert into Sensor_Data (SensorID, Date_n_Time, SensorData) values (?,?,?)",[SensorID, Data_and_Time, SensorData])
+	dbObj.add_del_update_db_record("insert into Sensor_Data (SensorID, SensorData, DateNTime ) values (?,?,?)",[SensorID, Data_and_Time, SensorData])
 	del dbObj
 	print "Inserted First Sensor Data into Database."
 	print ""
@@ -55,12 +55,12 @@ def sensor2_Data_Handler(jsonData):
 	#Parse Data 
 	json_Dict = json.loads(jsonData)
 	SensorID = json_Dict['SensorID']
-	Data_and_Time = json_Dict['Date_n_Time']
 	Sensor2Data = json_Dict['Sensor2Data']
+	DateNTime = json_Dict['DateNTime']
 	
 	#Push into DB Table
 	dbObj = DatabaseManager()
-	dbObj.add_del_update_db_record("insert into Sensor2_Data (SensorID, Date_n_Time, Sensor2Data) values (?,?,?)",[SensorID, Data_and_Time, Sensor2Data])
+	dbObj.add_del_update_db_record("insert into Sensor2_Data (SensorID, Sensor2Data, DateNTime) values (?,?,?)",[SensorID, Data_and_Time, Sensor2Data])
 	del dbObj
 	print "Inserted second sensor's data into Database."
 	print ""

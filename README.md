@@ -8,8 +8,8 @@ For setting up the VPS files, I urge you to go the latter website for an excelle
 
 Make sure that your data variables are the same from the ESP8266, to the DB and on to the "Store.." file on the VPS. Adjust the file variables for your specific sensor's data, although it will work 'as is'. 
 
-"Initialise_.." creates the DB. In a terminal run "python store_..", then python mqtt_Listen_..". The latter will print out the data being written to the DB.  
+"Initialise_.." creates the DB. In a terminal run "python store_..", then python mqtt_Listen_..". The latter will print out the data being written to the DB. NB: Make sure that all the data that is written to SQlite is in the correct order (as in the DB) in all the files that handle it. If not, it will not write it to the relevant fields! 
 
 I am not a professional programmer, so apologies any "strange" coding! The main thing is that it works and was a great learning experience! 
 
-Note: I never had a RTC, so I gave the 'time' a fixed value. I will work on this at a future date.
+I never had a RTC, so I have used NTPClient to give the timestamp. It works well, although I still need to sort out the date.
